@@ -1,0 +1,12 @@
+@WebApplication_HostAddress = http://localhost:5077
+
+GET {{WebApplication_HostAddress}}/numberordering/
+Accept: application/json
+
+###
+
+POST {{WebApplication_HostAddress}}/numberordering
+Content-Type: application/json
+
+[5, 2, 8, 10, 1]
+###
