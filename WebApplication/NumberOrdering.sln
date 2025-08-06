@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36327.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication.csproj", "{4338AB95-39F1-4010-9F1E-F58ED531072D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessServices", "..\Business\BusinessServices.csproj", "{B614B438-5E39-426F-B397-8FDEC2A09D90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessServices", "..\BusinessServices\BusinessServices.csproj", "{B614B438-5E39-426F-B397-8FDEC2A09D90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessServicesTests", "..\BusinessServicesTests\BusinessServicesTests.csproj", "{826CA974-5F9C-4EDE-AAF6-208080598A3A}"
 EndProject
