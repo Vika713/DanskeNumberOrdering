@@ -1,4 +1,5 @@
 using BusinessServices;
+using BusinessServices.SortingAlgorithms;
 using Microsoft.Extensions.Options;
 using WebApplication.Configuration;
 
@@ -17,6 +18,10 @@ builder.Services.AddScoped<INumberStorageService>(sp =>
     return new FileService(options.FilePath);
 });
 builder.Services.AddScoped<ISortingService, SortingService>();
+builder.Services.AddTransient<ISortAlgorithm, ArraySortAlgorithm>();
+builder.Services.AddTransient<ISortAlgorithm, BubbleSortAlgorithm>();
+builder.Services.AddTransient<ISortAlgorithm, QuickSortAlgorithm>();
+builder.Services.AddTransient<ISortAlgorithm, MergeSortAlgorithm>();
 
 var app = builder.Build();
 

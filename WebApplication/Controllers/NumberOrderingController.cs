@@ -27,11 +27,13 @@ namespace WebApplication.Controllers
             try
             {
                 var numbers = await _numberStorageService.ReadNumbers();
+
                 return Ok(numbers);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error reading numbers from storage");
+
                 return StatusCode(500, Array.Empty<double>());
             }
         }
@@ -42,12 +44,15 @@ namespace WebApplication.Controllers
             try
             {
                 var orderedNumbers = _sortingService.SortNumbers(numbers);
+
                 await _numberStorageService.SaveNumbers(orderedNumbers);
+
                 return new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error processing numbers");
+
                 return new HttpResponseMessage(System.Net.HttpStatusCode.InternalServerError);
             }
         }
